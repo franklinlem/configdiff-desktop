@@ -1,7 +1,7 @@
 # ConfigDiff Desktop
 
 Comparação local de configurações JSON, YAML e .env, sem backend.
-**0.1.0rc1 — candidato local Linux; publicação final ainda pendente.**
+**0.1.0rc2 — candidato local Linux; publicação final ainda pendente.**
 
 ## Executar no Debian 13
 
@@ -62,6 +62,7 @@ verifica comparação, mascaramento, exportação e cancelamento; retorna erro s
 ## Pacote Linux sem Python
 
 ```sh
+.venv/bin/python scripts/fetch_upstream_sources.py
 .venv/bin/python scripts/build_candidate.py
 ./dist/ConfigDiff/ConfigDiff
 ```
@@ -69,10 +70,12 @@ verifica comparação, mascaramento, exportação e cancelamento; retorna erro s
 O candidato inclui documentação, exemplos, código versionado, inventário, textos de
 licença disponíveis e checksums. Validação offline em contêiner sem Python e detalhes
 em [distribuição](docs/releasing.md) e [fase 5](docs/phase-5.md). O aceite funcional
-Linux de Franklin está em [acceptance.md](docs/acceptance.md). Windows, licença final
-e complementação de fontes/atribuições Qt seguem pendentes antes da publicação.
+Linux de Franklin está em [acceptance.md](docs/acceptance.md). Windows e complementação de fontes/atribuições Qt seguem pendentes antes da publicação.
 
 Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md), [fase 3](docs/phase-3.md), [fase 4](docs/phase-4.md), [fase 5](docs/phase-5.md),
 [arquitetura](docs/architecture.md), [formatos suportados](docs/formats.md)
 e [distribuição](docs/releasing.md). O planejamento original permanece preservado.
 O repositório Git é local; publicação no GitHub não foi feita.
+
+Código próprio sob [MIT](LICENSE), confirmada por Franklin. O pacote RC1 extraído foi
+aceito no desktop; o RC2 acrescenta fontes e atribuições. Veja [continuidade](docs/release-followup.md).

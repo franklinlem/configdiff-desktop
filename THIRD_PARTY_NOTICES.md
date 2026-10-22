@@ -18,8 +18,13 @@ Não representa certificação SPDX nem análise automática de conformidade.
 O pacote copia os textos disponíveis nos metadados dos pacotes selecionados, a licença
 Python instalada, textos comuns GNU e os arquivos copyright dos provedores Debian
 identificados. O texto BSD de Qt for Python em third_party/licenses foi obtido do
-tag oficial v6.12.0. Isso ainda não cobre automaticamente todas as atribuições e
-fontes dos terceiros incorporados nas bibliotecas Qt/ICU/plugins de seus wheels.
+tag oficial v6.12.0. O RC2 acrescenta 99 registros upstream e 245 arquivos de avisos/atribuições em
+licenses/upstream, com índice em licenses/upstream-index.json. As oito fontes completas
+estão no arquivo adjacente configdiff-0.1.0rc2-upstream-sources.tar; manifesto de URLs e
+hashes também em source/upstream-sources.json. Não representa confirmação automática
+dos patches/configuração dos wheels nem das fontes de todos os provedores Debian.
+Os registros de testes/exemplos/ferramentas são conservadores e não provam inclusão
+nos binários. Mais detalhes em docs/release-followup.md.
 
 Antes de publicação: conferir cada módulo/plugin e componente incorporado no
 inventário, reunir seus avisos específicos, disponibilizar as fontes correspondentes
@@ -28,8 +33,7 @@ bibliotecas LGPL. O modo onedir mantém bibliotecas em arquivos separados; isso,
 não certifica cumprimento de todas as condições. Não impor restrições incompatíveis
 à modificação dessas bibliotecas ou depuração das modificações.
 
-O código próprio tem proposta MIT em LICENSE.proposed; a licença final ainda não foi
-confirmada. O candidato é preparado para avaliação local e não é publicado pelo script.
+O código próprio usa MIT em LICENSE, confirmada por Franklin em 22/10/2026. O candidato é preparado para avaliação local e não é publicado pelo script.
 Referências oficiais consultadas em 22/10/2026:
 
 - https://doc.qt.io/qtforpython-6/licenses.html

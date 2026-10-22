@@ -16,6 +16,10 @@ bundle-inventory.json inventaria binários e proveniência; THIRD_PARTY_NOTICES.
 explica licenças e as pendências para publicação. source contém o código versionado
 usado neste build, sem arquivos locais não versionados.
 
-Este é um candidato local, não uma release pública aprovada. Licença do código
-próprio e correspondência completa de fontes/atribuições Qt permanecem para revisão.
+Este é um candidato local, não uma release pública aprovada. O código próprio usa MIT. A correspondência completa de fontes/atribuições Qt
+permanece para revisão.
 O pacote não é assinado. Não excluir ou mover isoladamente _internal.
+
+O RC2 acrescenta avisos/índice upstream. Fontes de dependências acompanham em arquivo
+separado configdiff-0.1.0rc2-upstream-sources.tar; preserve-o para avaliação da distribuição.
+MIT aplica-se ao código próprio; os componentes de terceiros mantêm suas licenças.

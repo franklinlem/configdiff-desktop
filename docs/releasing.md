@@ -1,4 +1,4 @@
-# Build e distribuição — 0.1.0rc1 local
+# Build e distribuição — 0.1.0rc2 local
 
 O candidato está preparado para avaliação local. Publicação final depende das
 pendências de phase-5.md e THIRD_PARTY_NOTICES.md. Windows/Ubuntu não são anunciados
@@ -12,6 +12,7 @@ como validados. Referência de build: Debian 13 x86_64, Python 3.13.5.
 .venv/bin/ruff check .
 .venv/bin/mypy
 QT_QPA_PLATFORM=offscreen .venv/bin/pytest -q
+.venv/bin/python scripts/fetch_upstream_sources.py
 .venv/bin/python scripts/build_candidate.py
 ```
 
@@ -21,6 +22,8 @@ script não inclui relatórios locais não versionados e não publica nada. O bu
 dist/ConfigDiff é reconstruído pelo PyInstaller; preserve arquivos próprios fora dele.
 
 Gerados: dist/ConfigDiff, dist/configdiff-VERSAO-linux-x86_64.tar.gz e arquivo .sha256.
+O arquivo separado configdiff-0.1.0rc2-upstream-sources.tar contém as fontes upstream
+verificadas e tem seu próprio .sha256. A coleta de avisos está versionada em third_party.
 O bundle inclui source/configdiff-source.tar.gz, build-info.json, bundle-inventory.json,
 files.sha256, docs, examples e licenses. O inventário distingue provedores Debian quando
 identificáveis e marca terceiros Qt incorporados ainda sem atribuição completa.
@@ -35,8 +38,8 @@ compilação nativa e bibliotecas de sistema impedem prometer binários idêntic
 A partir de dist, verifique o hash e extraia em uma pasta nova:
 
 ```sh
-sha256sum -c configdiff-0.1.0rc1-linux-x86_64.tar.gz.sha256
-tar -xzf configdiff-0.1.0rc1-linux-x86_64.tar.gz -C /caminho/para/pasta-nova
+sha256sum -c configdiff-0.1.0rc2-linux-x86_64.tar.gz.sha256
+tar -xzf configdiff-0.1.0rc2-linux-x86_64.tar.gz -C /caminho/para/pasta-nova
 cd /caminho/para/pasta-nova/ConfigDiff
 sha256sum -c files.sha256
 ./ConfigDiff

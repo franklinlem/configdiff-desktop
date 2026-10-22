@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0rc2 — 2026-10-22
+
+- MIT confirmada e aplicada ao código próprio.
+- Aceite desktop do RC1 extraído em Documentos, com hashes conferidos sem alteração.
+- Oito fontes upstream fixadas por hash e pacote adjacente de fontes completas.
+- 99 registros e 245 arquivos de avisos/licenças upstream, sem LicenseFile não resolvido.
+- Coletores de manutenção separados dos parsers restritivos da aplicação.
+
 ## 0.1.0rc1 — 2026-10-22
 
 - Aceite funcional geral da interface Linux informado por Franklin.

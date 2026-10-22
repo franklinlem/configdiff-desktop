@@ -1,0 +1,2 @@
+# Preserve os textos de licença upstream byte a byte, inclusive espaços originais.
+third_party/attributions/** -whitespace

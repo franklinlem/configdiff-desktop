@@ -22,3 +22,37 @@ def test_source_bundle_excludes_untracked_user_files(tmp_path):
     with tarfile.open(archive) as bundle:
         assert bundle.getnames() == ["configdiff-source/app.py"]
         assert b"SENTINEL" not in bundle.extractfile(bundle.getmembers()[0]).read()
+
+
+def test_notice_paths_cannot_escape(tmp_path, monkeypatch):
+    import pytest
+
+    scripts = Path(__file__).parents[2] / "scripts"
+    monkeypatch.syspath_prepend(str(scripts))
+    from collect_upstream_notices import safe_relative
+
+    assert safe_relative("qtbase/LICENSE") == Path("qtbase/LICENSE")
+    for invalid in ["/tmp/outside", "../outside", "inside/../../outside", "."]:
+        with pytest.raises(ValueError):
+            safe_relative(invalid)
+
+
+def test_source_hash_mismatch_is_not_published(tmp_path, monkeypatch):
+    import io
+
+    import pytest
+
+    monkeypatch.syspath_prepend(str(Path(__file__).parents[2] / "scripts"))
+    import fetch_upstream_sources as fetcher
+
+    monkeypatch.setattr(fetcher, "ROOT", tmp_path)
+    monkeypatch.setattr(fetcher, "urlopen", lambda *args, **kwargs: io.BytesIO(b"wrong-content"))
+    item = {
+        "filename": "source.tar.xz",
+        "url": "https://example.invalid/source",
+        "sha256": "0" * 64,
+    }
+    with pytest.raises(ValueError, match="divergente"):
+        fetcher.fetch(item)
+    assert not (tmp_path / "dist/dependency-sources/source.tar.xz").exists()
+    assert not list((tmp_path / "dist/dependency-sources").glob("*.part"))

@@ -133,6 +133,31 @@ def bundle_inventory(bundle: Path) -> dict[str, object]:
     }
 
 
+def upstream_archive(version: str, bundle: Path) -> Path:
+    manifest = ROOT / "third_party/upstream-sources.json"
+    items = json.loads(manifest.read_text())["sources"]
+    for item in items:
+        source = ROOT / "dist/dependency-sources" / item["filename"]
+        if not source.is_file() or digest(source) != item["sha256"]:
+            raise ValueError("Execute scripts/fetch_upstream_sources.py antes de empacotar")
+    artifact = ROOT / "dist" / f"configdiff-{version}-upstream-sources.tar"
+    with tarfile.open(artifact, "w") as archive:
+        archive.add(manifest, arcname="dependency-sources/upstream-sources.json")
+        for item in items:
+            archive.add(
+                ROOT / "dist/dependency-sources" / item["filename"],
+                arcname="dependency-sources/" + item["filename"],
+            )
+    artifact.with_suffix(".tar.sha256").write_text(f"{digest(artifact)}  {artifact.name}\n")
+    shutil.copy2(manifest, bundle / "source/upstream-sources.json")
+    (bundle / "source/UPSTREAM.md").write_text(
+        f"Fontes de dependências: arquivo adjacente {artifact.name}.\n"
+        "Consulte upstream-sources.json para URLs e hashes. Bibliotecas Debian e "
+        "configurações exatas dos wheels ainda requerem correspondência/revisão.\n"
+    )
+    return artifact
+
+
 def main() -> None:
     version = metadata.version("configdiff-desktop")
     subprocess.run(
@@ -160,17 +185,22 @@ def main() -> None:
             relative = name
         elif name.startswith("third_party/licenses/"):
             relative = "licenses/project-collected/" + name.removeprefix("third_party/licenses/")
+        elif name.startswith("third_party/attributions/"):
+            relative = "licenses/upstream/" + name.removeprefix("third_party/attributions/")
+        elif name == "third_party/attributions-index.json":
+            relative = "licenses/upstream-index.json"
         elif name.startswith("tests/fixtures/"):
             relative = "examples/" + name.removeprefix("tests/fixtures/")
         if relative is not None:
             target = bundle / relative
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(ROOT / name, target)
-    for name in ["THIRD_PARTY_NOTICES.md", "LICENSE.proposed", "CHANGELOG.md"]:
+    for name in ["THIRD_PARTY_NOTICES.md", "LICENSE", "CHANGELOG.md"]:
         shutil.copy2(ROOT / name, bundle / name)
     shutil.copy2(ROOT / "packaging/README-portable.md", bundle / "README.md")
     (bundle / "source").mkdir(exist_ok=True)
     tracked_sources(ROOT, bundle / "source/configdiff-source.tar.gz")
+    upstream_archive(version, bundle)
     packages = copy_licenses(bundle)
     inventory = bundle_inventory(bundle)
     (bundle / "bundle-inventory.json").write_text(json.dumps(inventory, indent=2), encoding="utf-8")

@@ -23,6 +23,11 @@ inferir que todos os ensaios específicos abaixo foram realizados manualmente.
 Testes estão em tests/unit, tests/integration e tests/gui. Somente fixtures sintéticas.
 A captura em docs/images/interface.png mostra o resultado com valores ocultos.
 
+Em seguida, Franklin validou o pacote RC1 copiado e extraído em
+/home/franklin/Documentos/ConfigDiff/, executando-o pelo Konsole com sucesso.
+Os 419 hashes dessa cópia foram conferidos sem alterar arquivos. Detalhes da
+continuidade, MIT e fontes em [release-followup.md](release-followup.md).
+
 ## Roteiro manual complementar
 
 - Abrir os três pares example/example-b: JSON, YAML e env.txt (formato env explícito).

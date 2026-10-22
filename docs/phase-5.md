@@ -1,5 +1,9 @@
 # Fase 5 — candidato local de distribuição
 
+Atualização: MIT confirmada e pacote extraído RC1 aceito no desktop. O RC2 acrescenta
+fontes/atribuições; veja [release-followup.md](release-followup.md). O restante preserva
+a evidência do RC1 no momento da preparação inicial.
+
 Versão 0.1.0rc1, em 22/10/2026. O aceite funcional geral da interface Linux foi dado
 por Franklin; detalhes e limites em acceptance.md. Não é uma release pública final.
 
@@ -14,7 +18,7 @@ por Franklin; detalhes e limites em acceptance.md. Não é uma release pública 
 - Hashes SHA-256 de arquivos regulares e do arquivo de distribuição.
 - Imagem de teste Debian com digest-base fixado, sem Python, e execução sem rede.
 - Workflow nativo Linux/Windows preparado para gerar candidatos; sem publicação automática.
-- Proposta MIT concreta em LICENSE.proposed, sem assumir confirmação da licença final.
+- Proposta MIT concreta em LICENSE, sem assumir confirmação da licença final.
 
 O primeiro teste no Debian mínimo revelou ausência de libGL.so.1. O ambiente documentado
 foi ajustado para instalar libgl1/libegl1, fontes e configuração Fontconfig, preservando
@@ -56,7 +60,7 @@ O teste isolado é headless; não substitui aceite desktop em outro sistema.
 
 ## Pendências reais de release
 
-1. Confirmar a licença final do código próprio antes de publicação.
+1. Resolvido posteriormente: licença MIT confirmada por Franklin.
 2. Completar atribuições/fontes correspondentes dos terceiros incorporados nos wheels
    Qt/ICU/plugins e validar as condições aplicáveis de distribuição/substituição LGPL.
    Os textos e links reunidos não são uma certificação de conformidade completa.

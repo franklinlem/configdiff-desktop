@@ -22,6 +22,7 @@ jobs:
       - run: ruff format --check .
       - run: mypy
       - run: pytest -q
+      - run: python scripts/fetch_upstream_sources.py
       - run: python scripts/build_candidate.py
       - run: ./dist/ConfigDiff/ConfigDiff --smoke-test
         if: runner.os == 'Linux'
@@ -33,4 +34,5 @@ jobs:
           path: |
             dist/configdiff-*.tar.gz
             dist/configdiff-*.zip
+            dist/configdiff-*.tar
             dist/configdiff-*.sha256

@@ -1,8 +1,6 @@
-PROPOSTA PARA CONFIRMAÇÃO ANTES DA PUBLICAÇÃO — não é concessão de licença vigente.
-
 MIT License
 
-Copyright (c) 2026 Franklin Martins
+Copyright (c) 2017 itmeo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
