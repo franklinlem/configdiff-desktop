@@ -1,7 +1,7 @@
 # ConfigDiff Desktop
 
 Comparação local de configurações, planejada para JSON, YAML e .env, sem backend.
-**0.0.2 — fase 1: fundação do núcleo; interface ainda é o protótipo sintético.**
+**0.0.3 — fase 2: leitura e parsers; interface ainda é o protótipo sintético.**
 
 ## Executar no Debian 13
 
@@ -18,6 +18,18 @@ A janela inicia um trabalho sintético de 30 segundos. Cancele pelo botão ou fe
 a janela; sem ação, o trabalho termina por timeout de 10 segundos. Não seleciona
 nem lê configurações reais. Não há persistência ou acesso de rede no protótipo.
 Ctrl+C no terminal encerra a aplicação e o trabalho ativo, com código de saída 130 e sem traceback.
+
+## Validar arquivos no terminal
+
+```sh
+.venv/bin/configdiff-inspect tests/fixtures/example.json
+.venv/bin/configdiff-inspect tests/fixtures/example.yaml
+.venv/bin/configdiff-inspect tests/fixtures/example.env.txt --format env
+```
+
+Executa leitura e parsing em processo isolado; mostra somente formato, tipo da raiz,
+número de nós e tamanho. Não imprime chaves/valores. Regras em [formats.md](docs/formats.md).
+Ainda não há comparação entre arquivos. A interface gráfica continua demonstrativa.
 
 ## Verificar
 
@@ -43,7 +55,7 @@ O pacote inclui Python; ainda depende de bibliotecas do sistema Linux e do servi
 gráfico. Em Windows, usar Python nativo, `requirements-windows.txt` e o mesmo comando
 de build; executar `dist/ConfigDiff/ConfigDiff.exe --smoke-test`.
 
-Consulte [evidências da fase 0](docs/phase-0.md), [incremento da fase 1](docs/phase-1.md),
+Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md),
 [arquitetura](docs/architecture.md), [política YAML experimental](docs/formats.md)
 e [distribuição](docs/releasing.md). O planejamento original permanece preservado.
 O repositório Git é local; publicação no GitHub não foi feita.

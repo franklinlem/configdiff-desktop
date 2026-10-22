@@ -1,5 +1,7 @@
 # Fase 1 — fundação do núcleo
 
+Registro histórico; a fase 2 está documentada em [phase-2.md](phase-2.md).
+
 Incremento 0.0.2, em 22/10/2026. A continuidade local Linux foi autorizada por
 Franklin após o protótipo da fase 0. Windows, teste em máquina limpa e aceite visual
 continuam pendentes para distribuição; não impedem os incrementos locais.

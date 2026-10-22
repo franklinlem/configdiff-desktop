@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.3 — 2026-10-22
+
+- Leitura limitada e somente leitura de arquivos regulares, com verificação de metadados.
+- Parsers JSON, YAML por eventos e .env literal, com regras e limites documentados.
+- LoadJob em processo spawn com timeout/cancelamento e recepção IPC em thread.
+- CLI configdiff-inspect com metadados, fixtures sintéticas e benchmark reproduzível.
+- 155 testes; comparação e GUI de uso real ainda pendentes.
+
 ## 0.0.2 — 2026-10-22
 
 - Ctrl+C encerra a GUI e o processo filho sem traceback; regressão POSIX real.

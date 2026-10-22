@@ -54,3 +54,32 @@ KeyboardInterrupt surgir dentro de um slot Qt. Referências consultadas:
 
 - https://docs.python.org/3.13/library/signal.html
 - https://doc.qt.io/qtforpython-6/PySide6/QtCore/QCoreApplication.html
+
+## Leitura e parsing isolados — fase 2
+
+`services/files.py` abre somente para leitura, confirma arquivo regular com fstat,
+limita a leitura inclusive se crescer e compara tamanho/mtime/ctime/inode antes e
+depois. Symlink de entrada para arquivo regular é permitido. A captura usa o objeto
+aberto; não promete detectar toda troca concorrente do caminho nem alterações que
+preservem os metadados observados. Capturas não imprimem bytes em repr.
+
+`workers/loading.py` implementa LoadJob com contexto spawn e timeout monotônico.
+Recebe só Loaded (Node + identidade) ou Failure (código/lado/posição), nunca exceções
+com mensagens de bibliotecas. O IPC é privado entre processos criados pela aplicação;
+serializações fornecidas pelo usuário não são carregadas. Não há arquivos temporários
+com conteúdo. Ctrl+C no filho é ignorado; cancelamento/kill é coordenado pelo pai.
+
+ADR 0003: o Pipe é recebido por uma thread dedicada do pai, com fila consultável sem
+bloqueio. Poll de pipe seguido de recv na GUI poderia bloquear em uma mensagem parcial
+maior que seu buffer. Apenas parsing e leitura rodam no processo; a thread faz IPC.
+Cancelamento termina o filho, aguarda por tempo limitado e descarta resposta tardia.
+Não equivale a isolamento de permissões nem a promessa de zeragem da RAM.
+
+ADR 0004: a versão definitiva de YAML interpreta eventos BaseLoader, em vez de adaptar
+os construtores do SafeLoader sugerido originalmente. A política escalar é preservada,
+e a contagem de profundidade/nós acontece antes de alocar cada nó. Rejeição de tokens
+proibidos precede a construção. Referências oficiais consultadas nesta etapa:
+
+- https://docs.python.org/3.13/library/json.html
+- https://docs.python.org/3.13/library/os.html#os.open
+- https://pyyaml.org/wiki/PyYAMLDocumentation

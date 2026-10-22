@@ -1,0 +1,4 @@
+APP_ENV: development
+DB_PASSWORD: synthetic-example-only
+FEATURE_ENABLED: true
+RETRIES: 3

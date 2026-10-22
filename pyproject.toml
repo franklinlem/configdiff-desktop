@@ -4,13 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "configdiff-desktop"
-version = "0.0.2"
-description = "ConfigDiff Desktop — fundação do núcleo"
+version = "0.0.3"
+description = "ConfigDiff Desktop — parsers locais isolados"
 requires-python = ">=3.13,<3.14"
 dependencies = ["PySide6-Essentials==6.12.0", "PyYAML==6.0.3"]
 
 [project.scripts]
 configdiff = "configdiff.app:main"
+configdiff-inspect = "configdiff.inspect:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -32,3 +33,7 @@ check_untyped_defs = true
 [[tool.mypy.overrides]]
 module = ["configdiff.domain.*"]
 strict = true
+
+[[tool.mypy.overrides]]
+module = ["yaml", "yaml.*"]
+ignore_missing_imports = true
