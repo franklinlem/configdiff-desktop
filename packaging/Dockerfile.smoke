@@ -1,0 +1,6 @@
+# Sistema de teste sem Python; não é imagem do aplicativo nem serviço de produção.
+FROM debian:13-slim@sha256:62bd423aeee912639ca8ee681c2b762cb3e25137e0a92b20be455898a9f034ad
+RUN apt-get update && apt-get install -y --no-install-recommends libgl1 libegl1 fontconfig-config fonts-dejavu-core && rm -rf /var/lib/apt/lists/*
+ENV LANG=C.UTF-8 QT_QPA_PLATFORM=offscreen HOME=/tmp XDG_CONFIG_HOME=/tmp/config
+USER 1000:1000
+CMD ["/bin/sh", "-c", "if command -v python3; then exit 3; fi; /app/ConfigDiff --smoke-test"]

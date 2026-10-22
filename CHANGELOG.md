@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0rc1 — 2026-10-22
+
+- Aceite funcional geral da interface Linux informado por Franklin.
+- Candidato portátil com documentação, exemplos e snapshot de código versionado.
+- Inventário de binários/provedores, avisos/textos de licença e checksums SHA-256.
+- Ambiente Debian de smoke sem Python, executado sem rede e sem privilégios.
+- CI prepara candidatos nativos; publicação/licença final/fontes Qt e Windows pendentes.
+
 ## 0.0.5 — 2026-10-22
 
 - Interface real: seleção de arquivos/formatos, comparação, busca, filtros e contadores.

@@ -22,12 +22,15 @@ jobs:
       - run: ruff format --check .
       - run: mypy
       - run: pytest -q
-      - run: python -m PyInstaller --noconfirm --clean --onedir --name ConfigDiff --paths src packaging/entrypoint.py
+      - run: python scripts/build_candidate.py
       - run: ./dist/ConfigDiff/ConfigDiff --smoke-test
         if: runner.os == 'Linux'
       - run: ./dist/ConfigDiff/ConfigDiff.exe --smoke-test
         if: runner.os == 'Windows'
       - uses: actions/upload-artifact@v4
         with:
-          name: phase0-${{ runner.os }}
-          path: dist/ConfigDiff/
+          name: candidate-${{ runner.os }}
+          path: |
+            dist/configdiff-*.tar.gz
+            dist/configdiff-*.zip
+            dist/configdiff-*.sha256

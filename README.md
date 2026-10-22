@@ -1,7 +1,7 @@
 # ConfigDiff Desktop
 
 Comparação local de configurações JSON, YAML e .env, sem backend.
-**0.0.5 — fase 4: interface gráfica funcional e ferramentas de terminal.**
+**0.1.0rc1 — candidato local Linux; publicação final ainda pendente.**
 
 ## Executar no Debian 13
 
@@ -59,18 +59,20 @@ QT_QPA_PLATFORM=wayland .venv/bin/python -m configdiff.app --smoke-test
 O último comando testa a janela na sessão gráfica com dados sintéticos. O modo smoke
 verifica comparação, mascaramento, exportação e cancelamento; retorna erro se falhar.
 
-## Empacotar
+## Pacote Linux sem Python
 
 ```sh
-.venv/bin/python -m PyInstaller --noconfirm --clean --onedir --name ConfigDiff --paths src packaging/entrypoint.py
-./dist/ConfigDiff/ConfigDiff --smoke-test
+.venv/bin/python scripts/build_candidate.py
+./dist/ConfigDiff/ConfigDiff
 ```
 
-O pacote inclui Python; ainda depende de bibliotecas do sistema Linux e do servidor
-gráfico. Em Windows, usar Python nativo, `requirements-windows.txt` e o mesmo comando
-de build; executar `dist/ConfigDiff/ConfigDiff.exe --smoke-test`.
+O candidato inclui documentação, exemplos, código versionado, inventário, textos de
+licença disponíveis e checksums. Validação offline em contêiner sem Python e detalhes
+em [distribuição](docs/releasing.md) e [fase 5](docs/phase-5.md). O aceite funcional
+Linux de Franklin está em [acceptance.md](docs/acceptance.md). Windows, licença final
+e complementação de fontes/atribuições Qt seguem pendentes antes da publicação.
 
-Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md), [fase 3](docs/phase-3.md), [fase 4](docs/phase-4.md),
+Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md), [fase 3](docs/phase-3.md), [fase 4](docs/phase-4.md), [fase 5](docs/phase-5.md),
 [arquitetura](docs/architecture.md), [formatos suportados](docs/formats.md)
 e [distribuição](docs/releasing.md). O planejamento original permanece preservado.
 O repositório Git é local; publicação no GitHub não foi feita.

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "configdiff-desktop"
-version = "0.0.5"
+version = "0.1.0rc1"
 description = "ConfigDiff Desktop — interface local de comparação"
 requires-python = ">=3.13,<3.14"
 dependencies = ["PySide6-Essentials==6.12.0", "PyYAML==6.0.3"]
