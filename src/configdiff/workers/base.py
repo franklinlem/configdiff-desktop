@@ -15,9 +15,20 @@ from configdiff.workers.protocol import Failure
 
 
 def _receive[T](
-    receiver: Connection, inbox: queue.Queue[T | Failure], side: Side | None, success_type: type[T]
+    receiver: Connection,
+    inbox: queue.Queue[T | Failure],
+    side: Side | None,
+    success_type: type[T],
+    stopped: threading.Event,
 ) -> None:
     try:
+        # Windows pode reter handles durante o bootstrap interrompido.
+        # Espera limitada permite cancelar sem depender de EOF nesse caso.
+        while not receiver.poll(0.05):
+            if stopped.is_set():
+                return
+        if stopped.is_set():
+            return
         value = receiver.recv()
         if not isinstance(value, (success_type, Failure)):
             value = Failure(ErrorCode.WORKER_FAILED, side)
@@ -60,14 +71,19 @@ class ProcessJob[T]:
             self._receiver.close()
             raise ConfigError(ErrorCode.WORKER_FAILED, side=side) from None
         sender.close()
+        self._reader_stopped = threading.Event()
         self._reader = threading.Thread(
-            target=_receive, args=(self._receiver, self._inbox, side, success_type), daemon=True
+            target=_receive,
+            args=(self._receiver, self._inbox, side, success_type, self._reader_stopped),
+            daemon=True,
         )
         self._reader.start()
 
     def poll(self) -> T | Failure | None:
         if self.reply is not None:
             return self.reply
+        if self.process.exitcode not in (None, 0):
+            return self.cancel(ErrorCode.WORKER_FAILED)
         if time.monotonic() >= self._deadline:
             return self.cancel(ErrorCode.TIMEOUT)
         try:
@@ -78,6 +94,7 @@ class ProcessJob[T]:
         return self.reply
 
     def _stop(self) -> None:
+        self._reader_stopped.set()
         if self.process.is_alive():
             self.process.terminate()
         self.process.join(0.5)
