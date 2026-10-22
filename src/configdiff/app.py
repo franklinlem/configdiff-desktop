@@ -1,5 +1,7 @@
 import multiprocessing
+import signal
 import sys
+from types import FrameType
 
 
 def main() -> int:
@@ -11,7 +13,26 @@ def main() -> int:
     from configdiff.ui.window import ProbeWindow
 
     application = QApplication([sys.argv[0]])
+    interrupted = False
+
+    def request_interrupt(signum: int, frame: FrameType | None) -> None:
+        nonlocal interrupted
+        # O handler só marca intenção; limpeza ocorre no loop Qt.
+        interrupted = True
+
+    previous_handler = signal.signal(signal.SIGINT, request_interrupt)
     window = ProbeWindow()
+    application.aboutToQuit.connect(window.cancel)
+    interrupt_timer = QTimer(application)
+    interrupt_timer.setInterval(50)
+
+    def check_interrupt() -> None:
+        if interrupted:
+            window.close()
+            application.exit(130)
+
+    interrupt_timer.timeout.connect(check_interrupt)
+    interrupt_timer.start()
     window.show()
     if "--smoke-test" in sys.argv:
         # Exercita também spawn e cancelamento dentro do pacote.
@@ -23,7 +44,12 @@ def main() -> int:
             application.exit(0 if success else 1)
 
         QTimer.singleShot(1200, verify_smoke)
-    return application.exec()
+    try:
+        return application.exec()
+    finally:
+        interrupt_timer.stop()
+        window.cancel()
+        signal.signal(signal.SIGINT, previous_handler)
 
 
 if __name__ == "__main__":

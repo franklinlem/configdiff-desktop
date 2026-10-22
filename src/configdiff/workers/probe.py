@@ -1,11 +1,14 @@
 """Prova de processo spawn terminável. Não processa arquivos de usuários."""
 
 import multiprocessing as mp
+import signal
 import time
 from multiprocessing.connection import Connection
 
 
 def _work(connection: Connection, delay: float) -> None:
+    # Ctrl+C do terminal é coordenado pelo pai, inclusive quando enviado ao grupo.
+    signal.signal(signal.SIGINT, signal.SIG_IGN)
     try:
         time.sleep(delay)
         connection.send("ok")

@@ -1,6 +1,10 @@
 # Fase 0 — evidências em 22/10/2026
 
-Status: provas locais Linux executadas; marco M0 ainda pendente de Windows e aceite
+Atualização após autorização de continuidade: desenvolvimento local Linux prossegue
+na fase 1; Windows e aceite visual continuam pendentes para distribuição. Detalhes
+em [phase-1.md](phase-1.md). O restante registra a evidência histórica da fase 0.
+
+Status histórico: provas locais Linux executadas; marco M0 ainda pendente de Windows e aceite
 visual. Conforme seção 12 do planejamento, a fase 1 depende desse marco. Não foi
 implementada comparação de configurações nem declarada a versão MVP pronta.
 
