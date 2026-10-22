@@ -83,3 +83,31 @@ proibidos precede a construção. Referências oficiais consultadas nesta etapa:
 - https://docs.python.org/3.13/library/json.html
 - https://docs.python.org/3.13/library/os.html#os.open
 - https://pyyaml.org/wiki/PyYAMLDocumentation
+
+## Comparação e relatório — fase 3
+
+`domain/comparison.py` percorre pares de nós, ordena a união de chaves e compara
+listas por posição. Ausência e mudança de tipo emitem uma única entrada sem descer
+no ramo. Nós compartilhados não vazios são percorridos; folhas e contêineres vazios
+iguais geram Igual. O núcleo continua sem Qt.
+
+`workers/base.py` concentra spawn, timeout, recepção em thread e encerramento; LoadJob
+mantém a API anterior. ComparisonJob executa leitura/parsing de A e B e comparação no
+mesmo processo. Erros são Failure, com lado A/B somente quando atribuíveis a uma
+entrada. Timeout e falha geral não inventam lado. Compared mantém resultado e
+referências de origem para proteção de escrita, sem expô-los em repr.
+
+`services/reports.py` filtra somente caminhos/categorias e projeta entradas em DTO
+sanitizado. O renderizador exige esse DTO, não ComparisonResult. Caminhos entram como
+code spans com delimitador calculado; não há interpolação de conteúdo em markup ativo.
+O aviso esclarece que nomes de chaves podem ser sensíveis.
+
+ADR 0005: exportar somente para destino novo com O_CREAT|O_EXCL, sem truncamento,
+substituição ou temporário. Simplicidade e integridade das origens prevalecem sobre
+sobrescrever um relatório existente. SourceRef registra caminho absoluto/resolvido e
+identidade capturada; eles não são serializados no relatório. Erros de escrita podem
+deixar arquivo parcial sanitizado; o aplicativo não remove automaticamente esse nome.
+Referências oficiais consultadas:
+
+- https://docs.python.org/3.13/library/os.html#os.O_EXCL
+- https://spec.commonmark.org/0.31.2/#code-spans

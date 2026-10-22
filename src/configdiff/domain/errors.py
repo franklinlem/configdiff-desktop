@@ -4,6 +4,10 @@ from enum import StrEnum
 
 
 class ErrorCode(StrEnum):
+    PROTECTED_SOURCE = "protected_source"
+    OUTPUT_EXISTS = "output_exists"
+    EXPORT_FAILED = "export_failed"
+    FORMAT_MISMATCH = "format_mismatch"
     INVALID_SYNTAX = "invalid_syntax"
     INVALID_ENCODING = "invalid_encoding"
     DUPLICATE_KEY = "duplicate_key"
@@ -25,6 +29,10 @@ class Side(StrEnum):
 
 
 _MESSAGES: dict[ErrorCode, str] = {
+    ErrorCode.PROTECTED_SOURCE: "O destino corresponde a um arquivo de origem",
+    ErrorCode.OUTPUT_EXISTS: "O destino já existe; escolha um novo arquivo",
+    ErrorCode.EXPORT_FAILED: "Não foi possível gravar o relatório",
+    ErrorCode.FORMAT_MISMATCH: "Escolha o mesmo formato para os dois arquivos",
     ErrorCode.INVALID_SYNTAX: "Sintaxe inválida",
     ErrorCode.INVALID_ENCODING: "Codificação inválida; use UTF-8",
     ErrorCode.DUPLICATE_KEY: "Chave duplicada",

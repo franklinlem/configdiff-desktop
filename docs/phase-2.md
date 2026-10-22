@@ -1,5 +1,7 @@
 # Fase 2 — leitura e parsers
 
+Registro histórico; comparação e relatórios estão em [phase-3.md](phase-3.md).
+
 Incremento 0.0.3, em 22/10/2026, validado localmente no Debian 13/Python 3.13.5.
 
 ## Entregue

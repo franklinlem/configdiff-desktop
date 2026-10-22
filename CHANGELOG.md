@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.0.4 — 2026-10-22
+
+- Comparador estrutural com cinco categorias, caminhos tipados e contagem coerente.
+- Busca por caminho, filtros combináveis e projeção de relatório sem valores.
+- Exportação Markdown literal, somente para arquivo novo, com proteção das origens.
+- ComparisonJob isolado; transporte compartilhado com LoadJob.
+- CLI configdiff-compare, pares sintéticos e benchmark de dois arquivos de 1 MiB.
+- 206 testes; interface gráfica de uso real ainda pendente.
+
 ## 0.0.3 — 2026-10-22
 
 - Leitura limitada e somente leitura de arquivos regulares, com verificação de metadados.

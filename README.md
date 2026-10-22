@@ -1,7 +1,7 @@
 # ConfigDiff Desktop
 
 Comparação local de configurações, planejada para JSON, YAML e .env, sem backend.
-**0.0.3 — fase 2: leitura e parsers; interface ainda é o protótipo sintético.**
+**0.0.4 — fase 3: comparação e relatório no terminal; GUI ainda demonstrativa.**
 
 ## Executar no Debian 13
 
@@ -29,7 +29,17 @@ Ctrl+C no terminal encerra a aplicação e o trabalho ativo, com código de saí
 
 Executa leitura e parsing em processo isolado; mostra somente formato, tipo da raiz,
 número de nós e tamanho. Não imprime chaves/valores. Regras em [formats.md](docs/formats.md).
-Ainda não há comparação entre arquivos. A interface gráfica continua demonstrativa.
+## Comparar e exportar
+
+```sh
+.venv/bin/configdiff-compare tests/fixtures/example.json tests/fixtures/example-b.json
+.venv/bin/configdiff-compare tests/fixtures/example.json tests/fixtures/example-b.json --query PASSWORD --category value_changed --output relatorio-password.md
+```
+
+Sem --output, mostra Markdown sanitizado no terminal. Relatórios contêm caminhos de
+chaves, categorias e tipos; valores são sempre omitidos. --query busca só caminhos;
+--category pode ser repetido. Destinos existentes são recusados: escolha um nome novo.
+[Detalhes e evidências da fase 3](docs/phase-3.md). A GUI continua demonstrativa.
 
 ## Verificar
 
@@ -55,7 +65,7 @@ O pacote inclui Python; ainda depende de bibliotecas do sistema Linux e do servi
 gráfico. Em Windows, usar Python nativo, `requirements-windows.txt` e o mesmo comando
 de build; executar `dist/ConfigDiff/ConfigDiff.exe --smoke-test`.
 
-Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md),
+Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md), [fase 3](docs/phase-3.md),
 [arquitetura](docs/architecture.md), [política YAML experimental](docs/formats.md)
 e [distribuição](docs/releasing.md). O planejamento original permanece preservado.
 O repositório Git é local; publicação no GitHub não foi feita.

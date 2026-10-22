@@ -1,0 +1,4 @@
+APP_ENV: production
+DB_PASSWORD: synthetic-production-only
+FEATURE_ENABLED: "true"
+TIMEOUT: 30
