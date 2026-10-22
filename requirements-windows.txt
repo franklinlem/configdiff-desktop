@@ -1,0 +1,8 @@
+# Versões diretas da prova Linux; resolução transitiva Windows ainda não validada.
+PySide6-Essentials==6.12.0
+PyYAML==6.0.3
+PyInstaller==6.22.3
+pytest==9.1.1
+pytest-qt==4.5.0
+ruff==0.17.2
+mypy==2.4.0
