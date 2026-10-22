@@ -111,3 +111,34 @@ Referências oficiais consultadas:
 
 - https://docs.python.org/3.13/library/os.html#os.O_EXCL
 - https://spec.commonmark.org/0.31.2/#code-spans
+
+
+## Interface e preferências — fase 4
+
+MainWindow coordena estados empty/selected/processing/done/cancelled/error. Nova
+comparação ou troca de arquivo/formato invalida o resultado antes de iniciar trabalho.
+ComparisonJob é consultado por QTimer; erros não mantêm resultados anteriores.
+Exportação projeta exatamente as entradas ordenadas/filtradas do modelo em DTO sanitizado.
+
+DiffTableModel usa QAbstractTableModel, sem widgets por célula. Exibe texto simples,
+mascara todas as células de valores e fornece dados somente para apresentação/acessibilidade.
+A revelação guarda apenas um par linha/coluna e um prazo monotônico, com QTimer de 15 s.
+Troca de foco, modelo, seleção, filtros ou ordem revoga a revelação. Não ordena valores;
+Ctrl+C da tabela é interceptado. Prévia escalar é limitada; contêineres não expõem filhos.
+
+QSettings guarda somente esquema/tema/dimensões/formato, valida campos ao ler e grava
+com sync atômico. A UI recebe PreferenceStore por injeção para testes sem tocar em
+preferências pessoais. Estilos claro/escuro são locais à janela; tema do sistema não
+substitui a paleta nativa. QScrollArea permite alcançar controles em área pequena.
+
+O app agora cria MainWindow. ProbeWindow foi isolada para os testes históricos. O
+smoke usa um diretório temporário somente de dados sintéticos e preferências isoladas,
+com comparação, relatório sanitizado e cancelamento real, inclusive no executável.
+
+A regressão SIGINT exige bloqueio POSIX durante spawn: proteger só a função do worker
+não cobria imports do bootstrap. A máscara é restaurada no pai em finally; o filho
+herda SIGINT bloqueado. SIGTERM/kill continuam disponíveis para cancelamento.
+Referências Qt consultadas:
+
+- https://doc.qt.io/qtforpython-6/PySide6/QtCore/QAbstractTableModel.html
+- https://doc.qt.io/qtforpython-6/PySide6/QtCore/QSettings.html

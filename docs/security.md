@@ -1,8 +1,8 @@
-# Segurança — estado da fase 3
+# Segurança — estado da fase 4
 
 O fluxo de terminal lê somente os dois arquivos indicados, em processo isolado,
-sem backend, telemetria, histórico, preferências ou acesso de rede iniciado pelo app.
-A GUI continua demonstrativa. Fixtures e benchmarks usam dados sintéticos.
+sem backend, telemetria, histórico ou acesso de rede iniciado pelo app.
+A GUI utiliza o mesmo núcleo. Fixtures e benchmarks usam dados sintéticos.
 
 Capturas limitadas e somente leitura preservam o conteúdo das origens; hashes são
 verificados nos testes. O sistema pode atualizar atime ao ler. O processo isolado
@@ -34,5 +34,13 @@ mensagem de erro controlada. Não é defesa contra processos hostis com as mesma
 permissões do usuário nem garante persistência após falha de energia.
 
 O indicador password/token/secret/api_key/private_key é auxiliar e incompleto. Todos
-os valores são omitidos da saída independentemente desse indicador. O mascaramento e
-revelação temporária na GUI serão implementados na fase 4.
+os valores são omitidos dos relatórios independentemente desse indicador. A GUI mascara
+todos os valores, limita a revelação a uma célula por até 15 s e oculta
+ao perder foco ou mudar o contexto. A prévia de string tem até 512 caracteres; não
+revela subárvores de contêineres. Cópia de valores, tooltips de conteúdo e edição não
+são oferecidos. Preferências contêm apenas esquema, tema, dimensões e formato.
+
+A apresentação usa texto simples: nomes de arquivos e erros não viram rich text.
+Limpar/fechar libera referências do resultado mantidas pela janela e cancela trabalho.
+A revelação não altera o DTO de exportação. Não há promessa de apagar dados de captura
+de tela, clipboard de caminhos, RAM ou histórico mantido pelo sistema operacional.

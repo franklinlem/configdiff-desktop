@@ -1,5 +1,7 @@
 # Fase 3 — comparação e privacidade
 
+Registro histórico; a interface funcional está em [phase-4.md](phase-4.md).
+
 Incremento 0.0.4, em 22/10/2026, validado localmente no Debian 13/Python 3.13.5.
 
 ## Entregue

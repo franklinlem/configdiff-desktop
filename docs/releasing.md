@@ -1,6 +1,6 @@
 # Distribuição
 
-Este pacote é somente uma prova local 0.0.2, não release MVP. Build nativo onedir;
+Este pacote é somente uma versão experimental local 0.0.5, não release MVP. Build nativo onedir;
 usar tar.gz no Linux para preservar symlinks das bibliotecas Qt. Comando de build no
 README. Gerar SHA-256 do arquivo compactado e guardar junto do artefato.
 

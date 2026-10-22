@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.0.5 — 2026-10-22
+
+- Interface real: seleção de arquivos/formatos, comparação, busca, filtros e contadores.
+- Tabela Qt com valores ocultos e revelação individual temporária, sem cópia de valores.
+- Exportação da visão atual, temas, atalhos, rolagem e preferências mínimas.
+- Smoke gráfico com comparação/exportação/cancelamento, inclusive no pacote Linux.
+- Corrida de SIGINT no bootstrap do filho corrigida no transporte POSIX.
+
 ## 0.0.4 — 2026-10-22
 
 - Comparador estrutural com cinco categorias, caminhos tipados e contagem coerente.

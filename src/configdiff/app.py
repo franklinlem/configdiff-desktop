@@ -1,16 +1,19 @@
 import multiprocessing
 import signal
 import sys
+import tempfile
+from pathlib import Path
 from types import FrameType
 
 
 def main() -> int:
     # Precisa anteceder Qt e processamento dos argumentos no executável congelado.
     multiprocessing.freeze_support()
-    from PySide6.QtCore import QTimer
+    from PySide6.QtCore import QSettings, QTimer
     from PySide6.QtWidgets import QApplication
 
-    from configdiff.ui.window import ProbeWindow
+    from configdiff.settings.preferences import PreferenceStore
+    from configdiff.ui.window import MainWindow
 
     application = QApplication([sys.argv[0]])
     interrupted = False
@@ -21,8 +24,16 @@ def main() -> int:
         interrupted = True
 
     previous_handler = signal.signal(signal.SIGINT, request_interrupt)
-    window = ProbeWindow()
-    application.aboutToQuit.connect(window.cancel)
+    smoke = "--smoke-test" in sys.argv
+    temporary = tempfile.TemporaryDirectory(prefix="configdiff-smoke-") if smoke else None
+    root = Path(temporary.name) if temporary else None
+    store = (
+        PreferenceStore(QSettings(str(root / "preferences.ini"), QSettings.Format.IniFormat))
+        if root
+        else None
+    )
+    window = MainWindow(store)
+    application.aboutToQuit.connect(window.invalidate)
     interrupt_timer = QTimer(application)
     interrupt_timer.setInterval(50)
 
@@ -34,22 +45,18 @@ def main() -> int:
     interrupt_timer.timeout.connect(check_interrupt)
     interrupt_timer.start()
     window.show()
-    if "--smoke-test" in sys.argv:
-        # Exercita também spawn e cancelamento dentro do pacote.
-        QTimer.singleShot(100, window.start)
-        QTimer.singleShot(1000, window.cancel)
+    if root is not None:
+        from configdiff.ui.smoke import schedule_smoke
 
-        def verify_smoke() -> None:
-            success = window.job is None and window.status.text() == "Cancelado"
-            application.exit(0 if success else 1)
-
-        QTimer.singleShot(1200, verify_smoke)
+        schedule_smoke(window, application, root)
     try:
         return application.exec()
     finally:
         interrupt_timer.stop()
-        window.cancel()
+        window.invalidate()
         signal.signal(signal.SIGINT, previous_handler)
+        if temporary is not None:
+            temporary.cleanup()
 
 
 if __name__ == "__main__":

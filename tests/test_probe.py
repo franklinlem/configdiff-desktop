@@ -3,7 +3,7 @@ import time
 import pytest
 from PySide6.QtCore import QTimer
 
-from configdiff.ui.window import ProbeWindow
+from configdiff.ui.probe_window import ProbeWindow
 from configdiff.workers.probe import ProbeJob
 
 

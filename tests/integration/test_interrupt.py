@@ -14,26 +14,38 @@ import pytest
 @pytest.mark.parametrize("running", [False, True])
 def test_terminal_interrupt(tmp_path, running):
     ready = tmp_path / "ready"
-    script = """
+    fixture = tmp_path / "large.yaml"
+    fixture.write_text("a: [" + ",".join("x" for _ in range(40_000)) + "]")
+    script = (
+        """
 from pathlib import Path
 from PySide6.QtCore import QTimer
-from configdiff.ui.window import ProbeWindow
+from configdiff.ui.window import MainWindow
 from configdiff.app import main
-original = ProbeWindow.show
+original = MainWindow.show
 
 def show(self):
     original(self)
     def ready():
         if RUNNING:
+            self.set_file(0, Path(INPUT))
+            self.set_file(1, Path(INPUT))
             self.start()
         Path(MARKER).write_text(str(self.job.process.pid) if self.job else "idle")
     QTimer.singleShot(200, ready)
-ProbeWindow.show = show
+MainWindow.show = show
 raise SystemExit(main())
-""".replace("RUNNING", repr(running)).replace("MARKER", repr(str(ready)))
+""".replace("RUNNING", repr(running))
+        .replace("MARKER", repr(str(ready)))
+        .replace("INPUT", repr(str(fixture)))
+    )
     process = subprocess.Popen(
         [sys.executable, "-c", script],
-        env={**os.environ, "QT_QPA_PLATFORM": "offscreen"},
+        env={
+            **os.environ,
+            "QT_QPA_PLATFORM": "offscreen",
+            "XDG_CONFIG_HOME": str(tmp_path / "settings"),
+        },
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         start_new_session=True,
@@ -46,7 +58,6 @@ raise SystemExit(main())
         child = ready.read_text()
         # Alvo é o pai; Ctrl+C no grupo é testado pelo cenário com trabalho ativo.
         if running:
-            time.sleep(0.3)  # permite que o filho spawn configure seu handler
             os.killpg(process.pid, signal.SIGINT)
         else:
             process.send_signal(signal.SIGINT)

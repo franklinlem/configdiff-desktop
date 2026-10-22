@@ -2,6 +2,7 @@
 
 import multiprocessing as mp
 import queue
+import signal
 import threading
 import time
 from collections.abc import Callable
@@ -43,7 +44,16 @@ class ProcessJob[T]:
         self.reply: T | Failure | None = None
         self.process = context.Process(target=target, args=(sender, *args))
         try:
-            self.process.start()
+            # POSIX: o filho herda SIGINT bloqueado desde o bootstrap Python.
+            # O pai restaura a máscara e recebe inclusive um sinal pendente.
+            if hasattr(signal, "pthread_sigmask"):
+                previous_mask = signal.pthread_sigmask(signal.SIG_BLOCK, {signal.SIGINT})
+                try:
+                    self.process.start()
+                finally:
+                    signal.pthread_sigmask(signal.SIG_SETMASK, previous_mask)
+            else:
+                self.process.start()
         except Exception:  # noqa: BLE001 - fronteira pública não pode expor exceções brutas
             sender.close()
             self._receiver.close()
