@@ -3,6 +3,7 @@
 import multiprocessing as mp
 import queue
 import signal
+import sys
 import threading
 import time
 from collections.abc import Callable
@@ -46,7 +47,7 @@ class ProcessJob[T]:
         try:
             # POSIX: o filho herda SIGINT bloqueado desde o bootstrap Python.
             # O pai restaura a máscara e recebe inclusive um sinal pendente.
-            if hasattr(signal, "pthread_sigmask"):
+            if sys.platform != "win32" and hasattr(signal, "pthread_sigmask"):
                 previous_mask = signal.pthread_sigmask(signal.SIG_BLOCK, {signal.SIGINT})
                 try:
                     self.process.start()
