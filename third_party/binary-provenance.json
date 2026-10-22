@@ -1,0 +1,1018 @@
+{
+  "binaries": [
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6Core.so.6",
+      "sha256": "26341368e3f2017ab9e33a3faa8806ae87fd59f2f8491f4c5aa7e8c1053b8a05",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6DBus.so.6",
+      "sha256": "678d0bf82548e35680a93615d476d79405f1d4beec4ce405236e04bc64ea14eb",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6EglFSDeviceIntegration.so.6",
+      "sha256": "512704d1a788f73c64318baca8fb7ff80c46c0cd8b87cb3a021b433f8abaa874",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6EglFsKmsSupport.so.6",
+      "sha256": "3727e903fd06b0de0804ccaa9e938262c82e879ac5479802c935af35201c322e",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6Gui.so.6",
+      "sha256": "392cf5a2fed77ca7b861484ae0f25a2f7f54789024e79518c6c28e1ddf5b4b1a",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6Network.so.6",
+      "sha256": "973d87ea5fc92dafb82aac307c32b7646cbd6640d06bc3f7d8b6c1771077603f",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6OpenGL.so.6",
+      "sha256": "8452e1c7f849a81f38fa2e99fbcd066c24902892fcfa4ce0e188f4691dc2d106",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6Svg.so.6",
+      "sha256": "ad54290bfb1929296b1662375d1902ad9810162051f51ff00bce3b2843bdbf2c",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6WaylandClient.so.6",
+      "sha256": "28423e53b5c6f6c69d50068be70467f15826027e6d965b68411e9daad30712dc",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6Widgets.so.6",
+      "sha256": "ae894c4a328a883311faf7449dcdd1ec70e6be25784e5676cb9977fe437d01c4",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6WlShellIntegration.so.6",
+      "sha256": "03b88400fcbbaeb19448b39cc1db9bd1cbc7e870ce5827eeb7254103e634549d",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libQt6XcbQpa.so.6",
+      "sha256": "fe274149676867bb59884a3bb0aa5ae6b2365a92f1e7449ea12a4dc267a53fa3",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libicudata.so.73",
+      "sha256": "4d24b3a908dd838bea23414e16aa830d05a2a306c475246ab11ef0a00c3037e9",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libicui18n.so.73",
+      "sha256": "ad5410f3e4eb4f01f91d10ddb3780cdbcbeb902ed04a3bc4d3f562b956578d52",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/lib/libicuuc.so.73",
+      "sha256": "8ce3427af0d2bf566bb422ce80a12014137d12ed452fe2dd9ed481ee46181168",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-emu-integration.so",
+      "sha256": "1e337b4872b2e121b42ddc96c2f8f2d2ff8ac1cf316d16aa76ed6096c680fce2",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-kms-egldevice-integration.so",
+      "sha256": "b0667a9cfac316748dbaa0ea0bb1d210a4fab52827b8e245cb91f89637a91adc",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/egldeviceintegrations/libqeglfs-x11-integration.so",
+      "sha256": "0fef7c20fb7101c14af8364083a3c1189d747e426bcb4583c4b047d5fee66ebb",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/generic/libqevdevkeyboardplugin.so",
+      "sha256": "ef18d01f3a305ace09d2090169adc08701333337e5e4a8cda47d09c60aca7a86",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/generic/libqevdevmouseplugin.so",
+      "sha256": "6687ce702ef9f59abc343ee84ed3dbc3632b68f1042d32afd52a56304c5d9635",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/generic/libqevdevtabletplugin.so",
+      "sha256": "58ded2aa69be32828a522266431f33a95b936caf09def7bcc27325ba2df7b425",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/generic/libqevdevtouchplugin.so",
+      "sha256": "fb973c106f3b3a680c36c0ec4b0bb0e7253c824b1be3a5810e2f31fc41fb6fc6",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/generic/libqtuiotouchplugin.so",
+      "sha256": "f2309a67f0856db60872807b502344d641f412896fc7c1ba99bf512e7a8313e2",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/iconengines/libqsvgicon.so",
+      "sha256": "5c83c91f83f7a528ad054d1031b338c21e9d7c3aca3d02bf98518ec5d89d65af",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqgif.so",
+      "sha256": "c84d1245e6824a2176079c5d72234b0a2a805b10214037b1229e8bc2c4ff62ca",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqicns.so",
+      "sha256": "36c77e14da63b8a6c2a09892240cd003fa31b4d7e0a1c1e3ff442baedf15b952",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqico.so",
+      "sha256": "9423748bb76c7a26197f7f5c437e25ce21aa3ff2717e5c6cc9c35d552b46f28e",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqjpeg.so",
+      "sha256": "aedd3e4f7a233365dcef9f016bd64f05575dd49aba69ce923fc99f214f5384ee",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqsvg.so",
+      "sha256": "b178be1a99734997111e740a54b2ac0649e66b73d51ce259f13cc6c7534861c9",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqtga.so",
+      "sha256": "b0efbd5a9c43151335f9490b0403ef0dcd7e77fbd06ecef9f16da7b4a80849c3",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqtiff.so",
+      "sha256": "4ec0307bc51f16f4812a781ab2facfdf45e06f427a103435d70ed29768808332",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqwbmp.so",
+      "sha256": "d7200eb7ab8542b4a99836c39c1f638b4f10bce171b9d0e71dd272bba5bb06d4",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/imageformats/libqwebp.so",
+      "sha256": "4b22639fb50987b5aec000690b165d7406ee4486a11d4c02b86c8a14e321f162",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/networkinformation/libqconnman.so",
+      "sha256": "59c2c9e4860dcf8d951770cb665e6dda44517c8b54ed6ea7a627e8ce0d91c923",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/networkinformation/libqglib.so",
+      "sha256": "8e978c49756b441464463ac743f733553e05e7a68cd4751c429876ebe0a149c3",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/networkinformation/libqnetworkmanager.so",
+      "sha256": "46a019a556c37d05aee27e436884b5c99bb6c14bdc5616c9968d0ee9e05fc658",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforminputcontexts/libcomposeplatforminputcontextplugin.so",
+      "sha256": "45aaae8084b7fa779198d157ad86ab4b531ba2dac1f7878a31f406f2ca81f273",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforminputcontexts/libibusplatforminputcontextplugin.so",
+      "sha256": "804c433df38fa569cfc7519feeafd79af04d8ad704f029578407e7fa05582b65",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqeglfs.so",
+      "sha256": "e1041cf05c62d6cbe087f483765f5ba746150d6f205d6c73e33967e25460cb10",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqlinuxfb.so",
+      "sha256": "ad25c4ba5d9c3c4f0d309e49f4c58a1ee414849cce3459922e51ff227e17ff5f",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqminimal.so",
+      "sha256": "65b076f7bcfcc1dfa2da0bfff3a40f6429d7b0470569d6569f8d8fe2d5314b1a",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqminimalegl.so",
+      "sha256": "a768d21ffdf42dedfe79e68e6672ef5daf1e4ce84086f1ca52d3ca36cb0bb64a",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqoffscreen.so",
+      "sha256": "b03cc26de26de6e09adceaf7ab2866ebbae39d88d893e0a5032e3ea55f190a67",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqvkkhrdisplay.so",
+      "sha256": "85812de2f714114edb5540245bacf2781582be044fd4d8aea087c94e630fd2df",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqvnc.so",
+      "sha256": "06b3346cc502993ffe14a771a42b85923bd176324550a42cb8959718f94aab54",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqwayland.so",
+      "sha256": "1ade530571b63a433d192110121a11bae023cc58d8a6e586a352936ac0d6c7c2",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platforms/libqxcb.so",
+      "sha256": "8611ee4e2315bcf4b38e14e2714b553e227e489a5cfaaa40b692fff9f2ac272a",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platformthemes/libqgtk3.so",
+      "sha256": "9a8157d6b1ae49e790f0d84b93d350616f92c97cbb3df673b3a63aa8b6351e7f",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/platformthemes/libqxdgdesktopportal.so",
+      "sha256": "67fe302dbb46f498dc6b7fc7d1d54d5939f55635ad988b9af730c2e25a31ea4a",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/tls/libqcertonlybackend.so",
+      "sha256": "06589a3be6fc031cf9342c754c44682da1da3ad4e5f04979ff9e58d140364650",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/tls/libqopensslbackend.so",
+      "sha256": "d6f153ea607720b1ea08fb66d224be3c012d5023cee983a22735ae11c03709d2",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-decoration-client/libadwaita.so",
+      "sha256": "225a5289c9518ea4a61a31daf881524309ff150a57601944eed37699e079da54",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-decoration-client/libbradient.so",
+      "sha256": "c7f7f5547ad55202de8a35dfa0765a7c67a8404dee19eb07c568ee3d64f49cc9",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-graphics-integration-client/libdmabuf-server.so",
+      "sha256": "06de14b9f4af7f3a89f8136b21bf3178c9e7d5957496a034ea5c3cc41f1cc23a",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-graphics-integration-client/libdrm-egl-server.so",
+      "sha256": "18e9efba44e96184c60581f13273285bf787d8f2e21231eb2f4b14a357a7dd44",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-graphics-integration-client/libqt-plugin-wayland-egl.so",
+      "sha256": "a18ea802b7cde98dbfb0769c8ff69b1fa7cd49750078567a8462f297e30665e4",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-graphics-integration-client/libshm-emulation-server.so",
+      "sha256": "571b172fb331e199f3c63c09d2cded3b585cd81cedeb2a15bddbb1540beb0017",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-graphics-integration-client/libvulkan-server.so",
+      "sha256": "8d8ac1c33618dc979c50497541bd7c0f5012ed34248de5b05fc15077b7e20fac",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-shell-integration/libfullscreen-shell-v1.so",
+      "sha256": "411e4a8b431937b0b54b7d72e1c7669c475ce91e31832808995387cd88e35306",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-shell-integration/libivi-shell.so",
+      "sha256": "b50baea26ba1a06806086e067b247eedaa6562dfe151e56fc1a90cf00b66c9dc",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-shell-integration/libqt-shell.so",
+      "sha256": "7b07043f423d73168b74b80a39ffe01b2e6bd091a155c2d3388e60fcaabb8772",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-shell-integration/libwl-shell-plugin.so",
+      "sha256": "644dd3a2a0cec928f16350088d90e0fe81db3364e386c498e43e5145a769f7d7",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/wayland-shell-integration/libxdg-shell.so",
+      "sha256": "69dee3d9eb391e4d167fb9c077a6bf2f0d7a074ce0a7d62ff6b6e34f50984f8c",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/xcbglintegrations/libqxcb-egl-integration.so",
+      "sha256": "01088ab95461d805bd558ce9d651e07b20215958f7febf4ec099c710cfcef5e7",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/Qt/plugins/xcbglintegrations/libqxcb-glx-integration.so",
+      "sha256": "af8bb94f80cdbed024770705f5ce1ec77cd543d379f539bd6463b26dc2ad7caa",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/QtCore.abi3.so",
+      "sha256": "c69ab7ddf99eaf37df6c9ed9498bba9f3678d8544de3921c13d046c31f0d484b",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/QtDBus.abi3.so",
+      "sha256": "c74ee1c00716b866f91f2bd083c381e0fffcb013830e05e8ecece5f33e587c0e",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/QtGui.abi3.so",
+      "sha256": "a4ebd89caef6afa4944f73436b47203fcbf5923d7fe2a8a90f1da00aeb4a4f27",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/QtNetwork.abi3.so",
+      "sha256": "37e1c2cd174d8f5bce1115df7b205a9f488f731b99a1b22f2fcb54efe3469424",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/QtWidgets.abi3.so",
+      "sha256": "4543cab2c4a8edee5bc4c818dc0ba2f8552ffa6b10a4b4ab02d8536f10400115",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/PySide6/libpyside6.abi3.so.6.12",
+      "sha256": "ec683d54c92945d3e1fa400c034e02600e812a274620d048203a885e26bc1776",
+      "wheel": "PySide6-Essentials"
+    },
+    {
+      "path": "_internal/libX11-xcb.so.1",
+      "sha256": "c73c2e98ad556a412dd6eef44b857dbd3cc02f191db8af30968084565f60f311",
+      "debian_provider": "libx11-xcb1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libX11.so.6",
+      "sha256": "b03e563b316b8b53c7988f0ee91d6656cc425538e00947a8b14482d179e80099",
+      "debian_provider": "libx11-6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXau.so.6",
+      "sha256": "4275ec5b14bec21770c44447b3a52977e211c7ba08745008f3a1783878e091bb",
+      "debian_provider": "libxau6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXcomposite.so.1",
+      "sha256": "b80f2a638fc5bb3ed9a400d48e758135687f10ee8e3b236c89bf0687250858db",
+      "debian_provider": "libxcomposite1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXcursor.so.1",
+      "sha256": "0a860c0162ffa5b37d88d2075d143e4e24295416fe85bb868e2daff07d2732fd",
+      "debian_provider": "libxcursor1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXdamage.so.1",
+      "sha256": "e87b12f4208b53769802abfa4052147ffcc5f0f7d76d8bcd677126a593cc70fb",
+      "debian_provider": "libxdamage1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXdmcp.so.6",
+      "sha256": "761409b24c818719f8c8a2a64a61c8ac6a3067f3d8882485dca64a98d7500040",
+      "debian_provider": "libxdmcp6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXext.so.6",
+      "sha256": "74cef58f0855cbbe23fce87566249f717e5c8ebeceee09efee393616a9b17697",
+      "debian_provider": "libxext6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXfixes.so.3",
+      "sha256": "85e29f4739a349d94d61db7a696f764d21dfe5c8db6ba7444af21416a0339187",
+      "debian_provider": "libxfixes3:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXi.so.6",
+      "sha256": "8ca60a4e6a90bba494e601e03e792b2d440cced9985deca64431abbd78613adb",
+      "debian_provider": "libxi6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXinerama.so.1",
+      "sha256": "d09736be08221c8040cab2b0d407a6b8197d3e337f9b81d9b48515e9e02b09b0",
+      "debian_provider": "libxinerama1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXrandr.so.2",
+      "sha256": "c99f3f78690b66428f91b5d66fa8531bcce8166e2324d34c911b61206b11ff52",
+      "debian_provider": "libxrandr2:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libXrender.so.1",
+      "sha256": "39fed75f787ac251cba86e30ccd979e3df1f84dd73c63a75eeb86a18fd413e64",
+      "debian_provider": "libxrender1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libatk-1.0.so.0",
+      "sha256": "07c8e8031a545009ab45cb317ff4b2ac712d50b5cc4e1fbb6b1fdf19016d321a",
+      "debian_provider": "libatk1.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libatk-bridge-2.0.so.0",
+      "sha256": "1cdf8a4540c1c7093de9afa2ad71180d8fe21f2dd049d463239820cc87416a8b",
+      "debian_provider": "libatk-bridge2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libatomic.so.1",
+      "sha256": "9558489f171274c220104894258f483055853ed8a23d4ff754c850ce55765aa2",
+      "debian_provider": "libatomic1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libatspi.so.0",
+      "sha256": "133c9ad85748ed520c3fb6ffdd3fcdfc3068ad41c0946574b87b509b7c9c7cc0",
+      "debian_provider": "libatspi2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libblkid.so.1",
+      "sha256": "116b712c143ac68bb59f6d8e32ed8e05e0772c730a9ba55ec544dd28916af58c",
+      "debian_provider": "libblkid1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libbrotlicommon.so.1",
+      "sha256": "7b0b0de90d8d3d4f07b99738c0285c6a0dbb6611d774ca44e7ea53a19a01ea68",
+      "debian_provider": "libbrotli1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libbrotlidec.so.1",
+      "sha256": "06530583d5927000480f4214d80d0213fec3d34cc448527f932a6eceb50cefef",
+      "debian_provider": "libbrotli1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libbz2.so.1.0",
+      "sha256": "c630f057efedc12f848710d71f40283895591e5b4608539f387895c64e0553da",
+      "debian_provider": "libbz2-1.0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libcairo-gobject.so.2",
+      "sha256": "c29e4900b772b0cbafeafbe3fb4ab7d0bc535f25791a5cdad3e821a2970f4c5f",
+      "debian_provider": "libcairo-gobject2:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libcairo.so.2",
+      "sha256": "55e6961d9c35923426aca75b85e10d69977428ffb6569719be13a87eb4fcab66",
+      "debian_provider": "libcairo2:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libcap.so.2",
+      "sha256": "41217b0af128444f66dee8adda52b2ceaf19da00e5b0b155e2b87b857671286b",
+      "debian_provider": "libcap2:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libcloudproviders.so.0",
+      "sha256": "0e700324c5afa3f083893b6be9bf6ddbac6aafa91c5d207f9f815e5a882a0fbe",
+      "debian_provider": "libcloudproviders0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libcom_err.so.2",
+      "sha256": "dc4828400674492839b630c001db424cd38e5cecfcf46dbf705a637647e04bea",
+      "debian_provider": "libcom-err2:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libcrypto.so.3",
+      "sha256": "8ae56f0a9481280a68c19f59809cd242a07a91ad7142944d21a878221992244b",
+      "debian_provider": "libssl3t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libdatrie.so.1",
+      "sha256": "ce632159af92e1d1ceec68652920c412fb105ea579c97c26896a29d1b876abde",
+      "debian_provider": "libdatrie1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libdbus-1.so.3",
+      "sha256": "f8c5475204730fa615547b10b642d7e27e5954ed1c12c47507743f2b486ba5a0",
+      "debian_provider": "libdbus-1-3:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libepoxy.so.0",
+      "sha256": "508c6214d08b997e0509e74b568f1e66f574951105cb11e59d12ed74a4239f13",
+      "debian_provider": "libepoxy0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libexpat.so.1",
+      "sha256": "36e7e50d21edcabed383bfddc594bb261c1c7cce456afdf23c5f53e849cda67c",
+      "debian_provider": "libexpat1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libffi.so.8",
+      "sha256": "922024ec5a23f7de1095b1cff2f6cbfb377b5d58cd51fd0ec2e8fe35427653e2",
+      "debian_provider": "libffi8:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libfontconfig.so.1",
+      "sha256": "d6344f71a0cfd5fcb154278f0be706021f75f79d1fcc973fc4ddb1dff40ab0ee",
+      "debian_provider": "libfontconfig1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libfreetype.so.6",
+      "sha256": "9e376992a91e92d86809893a3b9eea22a4e27849db1686f6ca58032f79cdafb5",
+      "debian_provider": "libfreetype6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libfribidi.so.0",
+      "sha256": "bbd962bd1c3ac1c25dc983d2951962caf55acb46a80e33ef93e31392edd5a222",
+      "debian_provider": "libfribidi0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgcc_s.so.1",
+      "sha256": "30c61ab012a4241bed033725a09b61f5fdd3bb7df95ee852d0b096520524c7af",
+      "debian_provider": "libgcc-s1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgdk-3.so.0",
+      "sha256": "cb75fbb8fbd28c507322a2d318e6a7199c4b7a4e9c60cb984bd3da613a997502",
+      "debian_provider": "libgtk-3-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgdk_pixbuf-2.0.so.0",
+      "sha256": "e92815ef102d064b64eedf79b5ada7413197cad48432d2b13772724cd2204d30",
+      "debian_provider": "libgdk-pixbuf-2.0-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgio-2.0.so.0",
+      "sha256": "ada55aa768da50c23a114736ac39dd8d8c62f77a5519747f99e8836e86a1fd35",
+      "debian_provider": "libglib2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libglib-2.0.so.0",
+      "sha256": "980ab64e995225de1543779e3bafafac9d705904d42ca3b5eb76e7a336cc5e1d",
+      "debian_provider": "libglib2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgmodule-2.0.so.0",
+      "sha256": "cb391dc09732706a0b2b9e2bf44ebe5539708cdeb8e8dd9c4ba910a958b78bb4",
+      "debian_provider": "libglib2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgobject-2.0.so.0",
+      "sha256": "ea1b3b14267d075022abfb2a8ab1c61d568124ebba97553d7b45a4f6444abebe",
+      "debian_provider": "libglib2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgraphite2.so.3",
+      "sha256": "5c4b17bdbd121d3c65f28c22d9c2a0504ca493d9e8fa7d7d31383c72237416b4",
+      "debian_provider": "libgraphite2-3:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgssapi_krb5.so.2",
+      "sha256": "c290f761873ebeac539911010526e1c5db86218bfcb29672760da46841741de0",
+      "debian_provider": "libgssapi-krb5-2:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgthread-2.0.so.0",
+      "sha256": "673907ae4a625ae4185c45c3ba40e363562fe94f533c3c4a1085868dbc492ec7",
+      "debian_provider": "libglib2.0-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libgtk-3.so.0",
+      "sha256": "a56aed9f46dc47d054555880c6dc543f41846b0732520c7d2e5ef45c5c7f2ddf",
+      "debian_provider": "libgtk-3-0t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libharfbuzz.so.0",
+      "sha256": "c0cc41333a8fc0c24428a61ba0af6380aabb1f0d91ac48c13ed743b06c8ccc87",
+      "debian_provider": "libharfbuzz0b:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libjpeg.so.62",
+      "sha256": "0928fd49fa79e10f72eb3276f1cf603d928201a628cd78e0118a2e9c01fd2dac",
+      "debian_provider": "libjpeg62-turbo:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libk5crypto.so.3",
+      "sha256": "c4c3221d0350f882cee0430b58d5fb289a5776c684d3156964864c8a9719dff1",
+      "debian_provider": "libk5crypto3:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libkeyutils.so.1",
+      "sha256": "e5d5a7450d08eff7d4bbcaac75ef2b94d3447c81a1b2ddf3ab85d2de4709a9a8",
+      "debian_provider": "libkeyutils1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libkrb5.so.3",
+      "sha256": "c4ab64e6bc2874a83e649e4439be752465da027a0041e2bb5343f81c80f0882d",
+      "debian_provider": "libkrb5-3:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libkrb5support.so.0",
+      "sha256": "f559f051ee5d39f151a57d79f2cde475c484030098b0c73f9f7035b421b187c4",
+      "debian_provider": "libkrb5support0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/liblzma.so.5",
+      "sha256": "7ca392e92ebb94b6f8ee094cbd5243185e4452377b94acc657f7ba8c8f9dda2c",
+      "debian_provider": "liblzma5:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libmount.so.1",
+      "sha256": "1654d2cf948e3608cc0d38340807d4ddac1114315a3a77f7b274c4c859cb2181",
+      "debian_provider": "libmount1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpango-1.0.so.0",
+      "sha256": "3aeb194a48f427b907d77986cc8b1d7a2f43f8dab6a91abb3fa0416d5b071132",
+      "debian_provider": "libpango-1.0-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpangocairo-1.0.so.0",
+      "sha256": "cd9ea0195bea8dc358774b5c7d3b4ef345d0bfc34c69a76f4e9e6d6d17bc6a91",
+      "debian_provider": "libpangocairo-1.0-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpangoft2-1.0.so.0",
+      "sha256": "f0a0ac4128a21eaec63b8d9811ab670cdf1763abfcde5d2d6d4693ecc8c7af99",
+      "debian_provider": "libpangoft2-1.0-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpcre2-8.so.0",
+      "sha256": "92e9b4167f9bbc237ca8f5526d82ee99ec9f8dbd0270ef1dd0ab24e2217f48e3",
+      "debian_provider": "libpcre2-8-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpixman-1.so.0",
+      "sha256": "806ef6cd6ff8dace4332b8d611afe2f1c5ec0c1b743ea7ed0ebd48ed307618cd",
+      "debian_provider": "libpixman-1-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpng16.so.16",
+      "sha256": "7dd8e62ca2f3b2b3bb642e485b1324b01950aad82eb63bad2c783ac94d80c001",
+      "debian_provider": "libpng16-16t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libpython3.13.so.1.0",
+      "sha256": "362412239e5c87cbcd67c720f368ebf414632bfad3e0f30d1e3e95db9cc60b55",
+      "debian_provider": "libpython3.13:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libselinux.so.1",
+      "sha256": "5cb5293b4e7590463b94f7b23152d54807a6a2ccaf8cac9e343908c6692c086c",
+      "debian_provider": "libselinux1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libssl.so.3",
+      "sha256": "9592038e92d1f41affcbb625334d0b6e788714c889104fa6d5b107cf9fd657f2",
+      "debian_provider": "libssl3t64:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libstdc++.so.6",
+      "sha256": "972bb2a18b71140dab0240f8a1f68ab3fb1d56bcd4c4f824a91b70888faf5a00",
+      "debian_provider": "libstdc++6:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libsystemd.so.0",
+      "sha256": "c59f9015342de9c2dcb2decccb3d83218849fe3e4388c723a6528254fd7606f0",
+      "debian_provider": "libsystemd0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libthai.so.0",
+      "sha256": "68da865e0efbc99eedc429f5e0c93a788cff55e85c0ecd37abc0279044a0cc32",
+      "debian_provider": "libthai0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-cursor.so.0",
+      "sha256": "54a692c826449c001cddb1282820ba22a44e38fb757decd3139f8944b5de787d",
+      "debian_provider": "libxcb-cursor0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-glx.so.0",
+      "sha256": "f5e5cc234f82dde4de1d1b604edb70c4ffa2dd41ce7ec9682cd7a6c985c35bca",
+      "debian_provider": "libxcb-glx0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-icccm.so.4",
+      "sha256": "636df1ff99cc0cddade4966cb97044fc6b3e981373096ea93d3dd7577a4a1164",
+      "debian_provider": "libxcb-icccm4:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-image.so.0",
+      "sha256": "4cbc9f5fcf9f935c1eb83f3e9c2b45843d6b4bdc73081036ff41030397d7458a",
+      "debian_provider": "libxcb-image0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-keysyms.so.1",
+      "sha256": "697a1afc7ccd64bb1165bd54bf65829c8306d99bd51dfaa27aa94b475f87eeb9",
+      "debian_provider": "libxcb-keysyms1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-randr.so.0",
+      "sha256": "aa6d39eabd9e5505bfa49e74124878cdc4d3354c816a86277c93952ffc9a1bf7",
+      "debian_provider": "libxcb-randr0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-render-util.so.0",
+      "sha256": "417e351039cd6701d3de6fbe6e48a505cf4e87d71733cfeb31a7cfdae98580c1",
+      "debian_provider": "libxcb-render-util0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-render.so.0",
+      "sha256": "6ceffcf824902eb4d9566e2c646511d6914073d355016134f1260d8891e563b5",
+      "debian_provider": "libxcb-render0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-shape.so.0",
+      "sha256": "bb2c3370968c2a0acdf435f19802aff9e10b1a0b8f06fbc3269ba74252d8e1be",
+      "debian_provider": "libxcb-shape0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-shm.so.0",
+      "sha256": "4a57cf736337398b8dda5fd842da9d8d040ff484ee7b418836f499f875623e9c",
+      "debian_provider": "libxcb-shm0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-sync.so.1",
+      "sha256": "fbb0fe758e9b21d509ebe4270a6c7cba47ce41f069a1d5e3d6744e4d6db3bd9f",
+      "debian_provider": "libxcb-sync1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-util.so.1",
+      "sha256": "7b24e07fe033b8e6362dcb78bd632c29a437194723e9020ca3f9104cf8959e88",
+      "debian_provider": "libxcb-util1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-xfixes.so.0",
+      "sha256": "6858d9cad712d1bb676e44cd9763d355ab18c0234ee8ecb6d9e2cf3cfda5069f",
+      "debian_provider": "libxcb-xfixes0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxcb-xkb.so.1",
+      "sha256": "594cc3c2ea1d668f34d01d93c676ce0e42553110a4534eba877dd3eba27a7a0c",
+      "debian_provider": "libxcb-xkb1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxkbcommon-x11.so.0",
+      "sha256": "026f10295a4aa9a0a8996c2fa76bc0d4adecb8ef328db48a97ad8d72bc8345fe",
+      "debian_provider": "libxkbcommon-x11-0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libxkbcommon.so.0",
+      "sha256": "9f26c41577e0e036cbf42352e85b13db6bce953fb730555b4fc7de5362dc93bb",
+      "debian_provider": "libxkbcommon0:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libz.so.1",
+      "sha256": "85590dd58edf5445e18bc7193e5ebc01ac5841f1ae187e97705a662e90c6421e",
+      "debian_provider": "zlib1g:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/libzstd.so.1",
+      "sha256": "27f07c9a49c2c956bcfb64cd4712976586a66facbf15fc7f09bc37413b5f2b21",
+      "debian_provider": "libzstd1:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_bz2.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "03d72a4d9ef7ade86971407b45790bf4aa66050f18f496b0c039b7af1689c4e2",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_codecs_cn.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "4c874f0d287dac4bd157c6bb24dbc75747b2ef57afab611b0a4c55f17a8405e1",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_codecs_hk.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "6b57a6b0fe0d4f76d6090cff80eb4a268a9749ec3f85bd546520dc166e51f336",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_codecs_iso2022.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "245f0d832243f217368e562169a90b16a464d15d144adc7c052ec7072443e95c",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_codecs_jp.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "220d087cf51a67fc0118d4c0d18dc0fbb00e42efd7972eecdb93e06e00166c42",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_codecs_kr.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "340d367608c5f54d17931e754212bac4ab48f824f4a651b11b49cac6a9b8d21e",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_codecs_tw.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "1ef3010d8c6f24b56957a70a191996640c0e650dcd65dc2452b523a71a6a27b0",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_contextvars.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "95bcf40a85f7f9ea49648ae5363acf2f632622f7db2176ed1f19da280fbb2ab8",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_ctypes.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "3e676dae0a658c6c94d82f4e49d2f4ed8a15687bb8806fcc6adfe70b2cd883e9",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_decimal.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "a79b13abf5d25baa259bc92d3f86a84ee111a766c6354d7cd2bb9b0ce2d99c31",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_hashlib.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "fe5ccb577d81444ca5f592e7484cd43088dcc7c555736a26c9aa9f95f8e052ed",
+      "debian_provider": "libpython3.13-minimal:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_lzma.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "5256bdb6fb1df2b0d8354aa1ba56114b1e5057c54d50e6f74c05144c74ee117a",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_multibytecodec.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "2bcac787b55753e460453897b96dbf17f15c835954c2c54edb6c69aba6b9a2e7",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_multiprocessing.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "2803157e76b0020c00f95749a31c9b560a5ebb205fb7ea2a896cccb960f18c50",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_posixshmem.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "fe4845a708612d1a9bea9caca6b0e599d85ecea14df1e2609c569b832c176064",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_queue.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "aad4ac9e48c621f4e049f88a0c0c47c58f80e2b39004d262272dd007fd2d0409",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/_ssl.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "0fa1018a902b893c15cff0d16520d307a89e5cc42ee7fb8b118ea1f9f823cf26",
+      "debian_provider": "libpython3.13-minimal:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/mmap.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "190ea1e1881e99e7b4e3d5f62fff5ca429fe11f73b2f019cde97003f86e1fa3d",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/resource.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "b66dd7ff3800a4b9cd8af06bacde81201e33ce4e074082bd02b3d483fbf7ead3",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/termios.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "6fcdcd5917eae1eaf9595ab538d233672ddd74491a29a70cf90c3efc17d74bb5",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/python3.13/lib-dynload/xxsubtype.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "5a8539442bc8b58695a323f1c3bb8585175289bbd143bd4f7181b576df0a4ae9",
+      "debian_provider": "libpython3.13-stdlib:amd64",
+      "package_database_md5_matches": true
+    },
+    {
+      "path": "_internal/shiboken6/Shiboken.abi3.so",
+      "sha256": "6195b9fac615bd9e5d9c3527819b844216b0f876dbfaafa5b3b314327b292d0c",
+      "wheel": "shiboken6"
+    },
+    {
+      "path": "_internal/shiboken6/libshiboken6.abi3.so.6.12",
+      "sha256": "2b3d9767d69da0afabe4a383dc241a110fac4c0bb63cdeb3d01314e9c702241e",
+      "wheel": "shiboken6"
+    },
+    {
+      "path": "_internal/yaml/_yaml.cpython-313-x86_64-linux-gnu.so",
+      "sha256": "3f91601d7da50f3d1521e807f04820be198ccaedc2a89094d69031cf8928d8af",
+      "wheel": "PyYAML"
+    }
+  ],
+  "mismatches": [],
+  "limits": [
+    "Exact identity to published wheels is verified, not a rebuild of their toolchain",
+    "Debian file verification uses local dpkg md5 records and SHA256 identity to bundle"
+  ],
+  "bundle_version": "0.1.0rc2",
+  "inventory_sha256": "a85f6be6c98c9a216929751e48442f401deb9ff0de712c4136bc8c3a70997f1b",
+  "project_source_snapshot_sha256": "d6f940e56e909a0e77b8bd67fb22f12eea9153355f0cc4630cd012c3254277f0",
+  "generated_executables": [
+    {
+      "path": "ConfigDiff",
+      "sha256": "6be2f32119ad1eb9989d551df5d95b8b02a3c030fb0ff20a978a617365d67c8d"
+    }
+  ]
+}

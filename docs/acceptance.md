@@ -39,3 +39,8 @@ continuidade, MIT e fontes em [release-followup.md](release-followup.md).
 
 O teste de contêiner offline sem Python cobre inicialização e fluxo automático do
 pacote; não substitui o roteiro no desktop. Windows e Ubuntu continuam sem aceite.
+
+
+Em 22/10/2026 Franklin também aceitou o RC2 extraído em
+dist/teste/ConfigDiff. A cópia teve seus 668 hashes conferidos somente para leitura.
+A auditoria complementar de pacotes/fontes está em provenance-audit.md.

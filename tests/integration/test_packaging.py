@@ -56,3 +56,61 @@ def test_source_hash_mismatch_is_not_published(tmp_path, monkeypatch):
         fetcher.fetch(item)
     assert not (tmp_path / "dist/dependency-sources/source.tar.xz").exists()
     assert not list((tmp_path / "dist/dependency-sources").glob("*.part"))
+
+
+def test_debian_source_versions_are_exact(monkeypatch):
+    import pytest
+
+    monkeypatch.syspath_prepend(str(Path(__file__).parents[2] / "scripts"))
+    from audit_provenance import deb822, source_lock
+
+    text = """Package: demo
+Version: 1.0-1
+Directory: pool/main/d/demo
+Format: 3.0 (quilt)
+Checksums-Sha256:
+ abc 10 demo_1.0.orig.tar.xz
+ def 20 demo_1.0-1.debian.tar.xz
+
+Package: demo
+Version: 2.0-1
+Directory: pool/main/d/demo
+Checksums-Sha256:
+ ghi 30 demo_2.0.orig.tar.xz
+"""
+    lock = source_lock(deb822(text), {("demo", "1.0-1")})
+    assert lock["packages"][0]["version"] == "1.0-1"
+    assert len(lock["files"]) == 2
+    assert lock["files"][0]["url"].startswith("https://deb.debian.org/debian/pool/")
+    with pytest.raises(ValueError, match="exata ausente"):
+        source_lock(deb822(text), {("demo", "missing")})
+
+
+def test_provenance_download_rejects_path_escape(tmp_path, monkeypatch):
+    import pytest
+
+    monkeypatch.syspath_prepend(str(Path(__file__).parents[2] / "scripts"))
+    from audit_provenance import download
+
+    for name in ["../private", "/tmp/private", "pool/../../private"]:
+        with pytest.raises(ValueError, match="inválido"):
+            download({"path": name}, tmp_path)
+
+
+def test_auxiliary_archive_rejects_changed_sources(tmp_path, monkeypatch):
+    import hashlib
+
+    import pytest
+
+    monkeypatch.syspath_prepend(str(Path(__file__).parents[2] / "scripts"))
+    from package_provenance import validate_sources
+
+    source = tmp_path / "source.tar.xz"
+    source.write_bytes(b"official-example")
+    item = {"path": source.name, "sha256": hashlib.sha256(source.read_bytes()).hexdigest()}
+    assert validate_sources(tmp_path, [item]) == [(source, source.name)]
+    source.write_bytes(b"changed")
+    with pytest.raises(ValueError, match="divergente"):
+        validate_sources(tmp_path, [item])
+    with pytest.raises(ValueError, match="inválido"):
+        validate_sources(tmp_path, [{"path": "../outside"}])

@@ -39,3 +39,15 @@ Referências oficiais consultadas em 22/10/2026:
 - https://doc.qt.io/qtforpython-6/licenses.html
 - https://doc.qt.io/qt-6/lgpl.html
 - https://pyinstaller.org/en/stable/license.html
+
+
+## Complemento posterior de proveniência do RC2
+
+A auditoria de 22/10/2026 comparou 74 arquivos diretamente com wheels publicados e
+105 arquivos Debian com os usados no build e registros locais dpkg, sem divergências.
+As versões fonte exatas dos 57 pacotes Debian foram reunidas em 193 arquivos,
+conferidos por SHA-256 dos índices APT. Relatórios e esse material acompanham em
+configdiff-0.1.0rc2-debian-sources-and-provenance.tar, além do pacote upstream anterior.
+Veja docs/provenance-audit.md para alcance e reprodução. Isso fecha a rastreabilidade
+de arquivos/pacotes/versões; não declara compilação reproduzível nem substitui a
+avaliação das condições aplicáveis ao distribuir o conjunto.

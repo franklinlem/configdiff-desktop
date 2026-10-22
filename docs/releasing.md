@@ -70,3 +70,14 @@ Workflow phase0.yml prepara qualidade e candidatos em runners nativos Linux/Wind
 Ainda não foi executado remotamente. Windows usa requirements-windows.txt, sem lock
 transitivo validado, e gera ZIP. Build Linux não é cross-compilation para Windows.
 Uma versão pública deve usar tag após checks e aceite; o workflow não publica releases.
+
+
+## Complemento de fontes e proveniência Debian
+
+A auditoria posterior do RC2 preserva o executável aprovado. No mesmo ambiente de
+build, execute scripts/audit_provenance.py e scripts/package_provenance.py; este
+último gera configdiff-0.1.0rc2-debian-sources-and-provenance.tar com .sha256 ao lado.
+Esse pacote complementa o aplicativo e as oito fontes upstream. Os três manifests de
+proveniência estão versionados em third_party. Detalhes, limites e métodos de
+conferência em provenance-audit.md. Novos builds devem refazer a auditoria; não
+transportar o relatório RC2 como prova de um binário diferente.

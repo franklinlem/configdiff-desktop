@@ -1,5 +1,12 @@
 # Changelog
 
+## Após o RC2 — 2026-10-22
+
+- Aceite de outra cópia extraída, com seus 668 hashes conferidos sem modificação.
+- Proveniência de 74 arquivos dos wheels oficiais e 105 arquivos Debian, sem divergências.
+- 57 pacotes-fonte exatos, 193 arquivos verificados e pacote auxiliar de fontes/evidências.
+- Aplicativo RC2 preservado; ferramentas de auditoria e manifests versionados.
+
 ## 0.1.0rc2 — 2026-10-22
 
 - MIT confirmada e aplicada ao código próprio.

@@ -66,7 +66,14 @@ rejeitam caminhos de atribuição que escapem do diretório e garantem que downl
 hash divergente não seja publicado nem deixe arquivo .part. A suíte da aplicação
 permanece com parsers restritivos, privacidade e encerramento preservados.
 
-## Ainda pendente para publicação final
+## Atualização da proveniência
+
+O aceite do RC2 e a auditoria posterior estão em [provenance-audit.md](provenance-audit.md).
+Ela verificou a identidade dos 179 binários de dependências e reuniu 193 arquivos
+fonte das versões exatas de 57 pacotes Debian. Os dados abaixo preservam o registro
+anterior à auditoria.
+
+## Pendências registradas no preparo do RC2
 
 - Conferência da configuração/patches exatos dos wheels Qt e sua correspondência com
   as fontes upstream coletadas; disponibilidade das fontes dos provedores Debian e

@@ -79,3 +79,7 @@ O repositório Git é local; publicação no GitHub não foi feita.
 
 Código próprio sob [MIT](LICENSE), confirmada por Franklin. O pacote RC1 extraído foi
 aceito no desktop; o RC2 acrescenta fontes e atribuições. Veja [continuidade](docs/release-followup.md).
+
+A proveniência do RC2 foi auditada sem alterar o aplicativo aceito: 179 arquivos de
+dependências conferidos e fontes exatas de 57 pacotes Debian reunidas. Consulte
+[auditoria e pacote auxiliar](docs/provenance-audit.md). Windows segue sem teste nativo.
