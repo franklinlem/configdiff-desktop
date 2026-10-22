@@ -99,3 +99,12 @@ Artefato Linux: dist/configdiff-0.1.0rc2-linux-x86_64.tar.gz (63452386 bytes).
 SHA-256: 575dc22c2a62898b7dd985647bf6d9c7446f8411f44c5733208c2d166d1c930f.
 Fontes: dist/configdiff-0.1.0rc2-upstream-sources.tar, com .tar.sha256 ao lado.
 Esta seção registra verificações posteriores ao build; o candidato validado foi preservado.
+
+
+## Atualização: repositório privado e CI
+
+A publicação privada e o Actions foram autorizados em 22/10/2026. O histórico foi
+enviado para franklinlem/configdiff-desktop. Windows e Ubuntu passaram em testes,
+build e smoke; evidências e limites em [github-actions.md](github-actions.md).
+Esta atualização substitui a pendência histórica de ausência de push e de testes
+automatizados Windows/Ubuntu acima; o aceite visual Windows continua pendente.

@@ -1,7 +1,10 @@
 # ConfigDiff Desktop
 
 Comparação local de configurações JSON, YAML e .env, sem backend.
-**0.1.0rc2 — candidato local Linux; publicação final ainda pendente.**
+**0.1.0rc2 — candidatos Linux e Windows validados no CI; release final pendente.**
+
+[Execução e pacotes no GitHub Actions](https://github.com/franklinlem/configdiff-desktop/actions/runs/39871502594)
+(repositório privado). [Resultados e limites da validação](docs/github-actions.md).
 
 ## Executar no Debian 13
 
