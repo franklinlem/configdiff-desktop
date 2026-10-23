@@ -38,9 +38,28 @@ continuidade, MIT e fontes em [release-followup.md](release-followup.md).
 - Testar pacote extraído no desktop, sem .venv; verificar hashes antes de executar.
 
 O teste de contêiner offline sem Python cobre inicialização e fluxo automático do
-pacote; não substitui o roteiro no desktop. Windows e Ubuntu continuam sem aceite.
+pacote; não substitui o roteiro no desktop. O aceite Windows posterior está registrado abaixo; Ubuntu continua sem aceite desktop manual.
 
 
 Em 22/10/2026 Franklin também aceitou o RC2 extraído em
 dist/teste/ConfigDiff. A cópia teve seus 668 hashes conferidos somente para leitura.
 A auditoria complementar de pacotes/fontes está em provenance-audit.md.
+
+
+## Aceite manual — Windows 11 Enterprise em VM
+
+Em 22/10/2026 Franklin informou que instalou uma VM com ISO do Windows 11
+Enterprise, copiou o ZIP, extraiu e executou o aplicativo com sucesso. O ambiente
+mostrado é QEMU/KVM. Registro do usuário: “a aplicação esta funcionando”.
+
+A [captura fornecida](images/windows-11-enterprise.png) mostra a interface no Windows,
+os exemplos JSON A/B carregados, cinco diferenças (duas de valor, uma de tipo e
+uma ausência de cada lado), tema escuro e uma célula de APP_ENV revelada. Os demais
+valores permanecem ocultos, incluindo DB_PASSWORD. O caminho visível identifica
+`configdiff-0.1.0rc2-windows-AMD64`; o hash do ZIP usado não foi informado.
+
+Registrado como aceite funcional geral do pacote portátil na VM Windows 11
+Enterprise. Não implica execução manual de todos os itens do roteiro: exportação,
+tempo real de ocultação, troca de foco, escalas e leitor de tela não foram confirmados
+individualmente. A edição/build exata do Windows e teste em hardware físico não
+foram informados. Evidências automatizadas complementares em [github-actions.md](github-actions.md).

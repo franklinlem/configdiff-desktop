@@ -45,6 +45,12 @@ Lint, formatação e mypy também passaram nos dois runners. O candidato Windows
 `configdiff-0.1.0rc2-linux-x86_64.tar.gz`. Os uploads incluem checksums e o arquivo
 adjacente com fontes upstream. Não foi criada release pública.
 
+## Aceite manual posterior
+
+Franklin executou o ZIP extraído em uma VM QEMU/KVM com Windows 11 Enterprise e
+confirmou o funcionamento. A comparação JSON está visível na captura fornecida.
+Registro e limites do aceite em [acceptance.md](acceptance.md#aceite-manual--windows-11-enterprise-em-vm).
+
 ## Limites
 
 A execução automatizada sem tela não representa aceite visual, leitor de tela ou

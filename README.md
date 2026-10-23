@@ -73,16 +73,18 @@ verifica comparação, mascaramento, exportação e cancelamento; retorna erro s
 O candidato inclui documentação, exemplos, código versionado, inventário, textos de
 licença disponíveis e checksums. Validação offline em contêiner sem Python e detalhes
 em [distribuição](docs/releasing.md) e [fase 5](docs/phase-5.md). O aceite funcional
-Linux de Franklin está em [acceptance.md](docs/acceptance.md). Windows e complementação de fontes/atribuições Qt seguem pendentes antes da publicação.
+Linux e Windows 11 Enterprise em VM estão em [acceptance.md](docs/acceptance.md).
+A correspondência completa de fontes/atribuições Qt segue pendente antes da release final.
 
 Consulte [evidências da fase 0](docs/phase-0.md), [fase 1](docs/phase-1.md), [fase 2](docs/phase-2.md), [fase 3](docs/phase-3.md), [fase 4](docs/phase-4.md), [fase 5](docs/phase-5.md),
 [arquitetura](docs/architecture.md), [formatos suportados](docs/formats.md)
 e [distribuição](docs/releasing.md). O planejamento original permanece preservado.
-O repositório Git é local; publicação no GitHub não foi feita.
+O [repositório GitHub](https://github.com/franklinlem/configdiff-desktop) é privado;
+a matriz CI Linux/Windows passou. Não foi criada release pública.
 
 Código próprio sob [MIT](LICENSE), confirmada por Franklin. O pacote RC1 extraído foi
 aceito no desktop; o RC2 acrescenta fontes e atribuições. Veja [continuidade](docs/release-followup.md).
 
 A proveniência do RC2 foi auditada sem alterar o aplicativo aceito: 179 arquivos de
 dependências conferidos e fontes exatas de 57 pacotes Debian reunidas. Consulte
-[auditoria e pacote auxiliar](docs/provenance-audit.md). Windows segue sem teste nativo.
+[auditoria e pacote auxiliar](docs/provenance-audit.md). O pacote Windows também foi aceito manualmente em VM Windows 11 Enterprise.

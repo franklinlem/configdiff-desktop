@@ -107,4 +107,6 @@ A publicação privada e o Actions foram autorizados em 22/10/2026. O histórico
 enviado para franklinlem/configdiff-desktop. Windows e Ubuntu passaram em testes,
 build e smoke; evidências e limites em [github-actions.md](github-actions.md).
 Esta atualização substitui a pendência histórica de ausência de push e de testes
-automatizados Windows/Ubuntu acima; o aceite visual Windows continua pendente.
+automatizados Windows/Ubuntu acima. Franklin posteriormente confirmou o funcionamento
+do ZIP extraído em VM Windows 11 Enterprise; captura e escopo em
+[acceptance.md](acceptance.md). Acessibilidade detalhada segue pendente.

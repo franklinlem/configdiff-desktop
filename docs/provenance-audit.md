@@ -84,10 +84,12 @@ relatório. Igualdade dos arquivos publicados não equivale a prova de build rep
 nem a certificação jurídica. As instruções e patches Debian estão nas respectivas
 fontes; configurações dos wheels continuam sendo as do fornecedor.
 
-Windows ainda exige runner/máquina nativa e aceite; não foi testado. Acessibilidade
-detalhada e Ubuntu continuam sem aceite específico. Nenhum repositório remoto,
-release pública ou push foi executado. A funcionalidade Linux foi aceita pelo usuário;
-estes dados deixam a preparação de publicação mais rastreável, sem ampliar o suporte.
+Na etapa original desta auditoria, Windows e publicação remota ainda estavam pendentes.
+Posteriormente, o repositório privado foi criado e a matriz Ubuntu/Windows passou
+([CI](github-actions.md)); Franklin também aceitou o pacote na VM Windows 11 Enterprise
+([aceite](acceptance.md)). Acessibilidade detalhada e aceite desktop Ubuntu permanecem
+pendentes. Nenhuma release pública foi criada. Esta auditoria de proveniência continua
+restrita ao pacote Debian analisado.
 
 Referências oficiais consultadas:
 
